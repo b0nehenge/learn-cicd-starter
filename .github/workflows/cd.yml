@@ -41,6 +41,7 @@ jobs:
       - name: Run DB Migrations
         run: |
           # npm run db:migrate
+          go install github.com/pressly/goose/v3/cmd/goose@latest
           ./scripts/migrateup.sh
 
       - name: Deploy to Cloud Run
